@@ -16,7 +16,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         char option;
-        double price;
+        double price, totalq, total= 0;
+        int qty;
 
         System.out.println("Welcome to Jimmy John's\nWhat would you like?");
 
@@ -67,9 +68,22 @@ public class Main {
                 System.out.println("You chose: " + choice);
                 System.out.printf("Cost: $%.2f\n", price);
 
+                //Get the user quantity
+                System.out.print("Enter the quantity: ");
+                qty = input.nextInt();
+
+                //total of the choice and the quantity
+                totalq = (qty * price);
+                System.out.println("Your total is $" + totalq);
+                double total1 = totalq;
+                double temp = totalq;
+                total = (total1 + temp);
             }
 
         } while(option != 'D');
+
+        //Sum all together
+        System.out.println("Your total is $" + total);
         System.out.println("Thank you for choosing Jimmy John's");
     }
 }
