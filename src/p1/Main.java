@@ -75,7 +75,7 @@ public class Main {
                 //total of the choice and the quantity
                 totalq = (qty * price);
                 System.out.println("Your total is $" + totalq);
-                total = totalq;
+                total += totalq;
             }
 
         } while(option != 'D');
